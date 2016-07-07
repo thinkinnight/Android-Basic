@@ -17,3 +17,8 @@ buildToolsVersion "23.0.3"
 * app/src/main/java  代码
 * app/src/main/res   资源
 * AndroidManifest.xml文件
+
+##ddms使用##
+* https://developer.android.com/studio/profile/monitor.html
+* https://developer.android.com/studio/profile/ddms.html
+* http://blog.csdn.net/feng88724/article/details/6460918
