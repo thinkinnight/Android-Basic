@@ -1,3 +1,5 @@
+package example.com.activitytest;
+
 import android.app.Activity;
 import android.os.Bundle;
 
