@@ -16,6 +16,10 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate");
         setContentView(R.layout.activity_main);
+        if(savedInstanceState!=null){
+            String tempData = savedInstanceState.getString("data_key");
+            Log.d(TAG, tempData);
+        }
         Button startNormalActivity=(Button)findViewById(R.id.start_normal_activity);
         Button startDialogActivity=(Button)findViewById(R.id.start_dialog_activity);
         startNormalActivity.setOnClickListener(new View.OnClickListener() {
@@ -32,6 +36,14 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState){
+        super.onSaveInstanceState(outState);
+        Log.d(TAG, "onsaveinstancestate");
+        String tempData = "something you just typed";
+        outState.putString("data_key", tempData);
     }
 
     @Override
