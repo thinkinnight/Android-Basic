@@ -28,4 +28,12 @@ public class SecondActivity extends Activity{
             }
         });
     }
+
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent();
+        intent.putExtra("data_return", "back to first activity");
+        setResult(RESULT_OK, intent);
+        finish();
+    }
 }
